@@ -1,12 +1,4 @@
-import Character from './character';
+import Damage from './attack';
 
-export default class Magician extends Character {
-  set stoned(cell) {
-    super.attack = cell;
-    this.damage = Math.round(super.attack - Math.log2(cell) * 5);
-  }
-
-  get stoned() {
-    return this.damage;
-  }
+export default class Magician extends Damage {
 }
