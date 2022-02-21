@@ -1,4 +1,11 @@
-import Damage from './attack';
+import CharacterWizards from './сharacterWizards';
 
-export default class Magician extends Damage {
+export default class Magician extends CharacterWizards {
+  constructor(name) {
+    super(name);
+    super.name = name;
+    super.type = 'Magician';
+    super.attack_property = 10;
+    super.defence = 40;
+  }
 }

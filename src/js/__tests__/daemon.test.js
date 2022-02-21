@@ -1,11 +1,11 @@
 /* eslint-disable */
-import Magician from "../magician";
+import Daemon from "../daemon";
 
 test('Вернет объект', () => {
-  const мagician = new Magician('Макс');
+  const мagician = new Daemon('Макс');
   const expected = {
     name: 'Макс',
-    type: 'Magician',
+    type: 'Daemon',
     health: 100,
     level: 1,
     attack_property: 10,
@@ -16,14 +16,14 @@ test('Вернет объект', () => {
 });
 
 test('Проверяем атаку', () => {
-  const мagician = new Magician('Макс');
+  const мagician = new Daemon('Макс');
   мagician.attack = 2;
   const expected = 9;
   expect(мagician.attack).toBe(expected);
 });
 
 test('Проверяем атаку с туманом', () => {
-  const мagician = new Magician('Макс');
+  const мagician = new Daemon('Макс');
   мagician.attack = 2;
   const expected = 4;
   const stonedHave = true
